@@ -1,3 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+	<%--@include file="css/header.css" --%>
+	<%--@include file="css/beforelogin.css" --%>
+	<%--@include file="css/footer.css" --%>
+ 
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,47 +15,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/Woojungjo/loginbefore_main.css">
-
     <title>WeCart</title>
 
     <script src="https://kit.fontawesome.com/a623128410.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Source+Sans+Pro:ital,wght@1,700&display=swap"
         rel="stylesheet">
+        
+      <link rel="stylesheet" href="/Woojungjo_Resources/css/main.css">
+    
 
 </head>
 <body>
-    <div class="wrapper_contatiner">
-      <div class="wrapper">
-       
-        <header>
-            <div class="container">
-                <div class="site_name">
-                         <div class="WeCart">
-                            <span>우리동네<br>장바구니</span>
-                        </div> <!--WeCart-->
-                </div>  <!--site_name-->
-
-                <ul class="headerbar_menu">
-                    <li>가격비교</li>
-                    <li>커뮤니티</li>
-                    <li>Q&A</li>
-                </ul><!--headerbar_menu-->
-
-                <ul class="header_login">
-                    <li>개포동 <i class="fa-solid fa-location-dot"></i></li>
-                    <li>로그인</li>
-                </ul><!--header_login-->
-
-            </div> <!--container-->
-        
-        </header>
-
-
-
-        <main>            
-        <!--*********************************************메인 내용은 여기부터*********************************************-->
+	<jsp:include page="/Woojung_JSP/beforelogin_header.jsp" flush="true" />
+	
+        <main>
+            <!--*********************************************메인 내용은 여기부터*********************************************-->
             <div class="main_container">
                 <div class="content">
                     당신의 장바구니가 더 가벼워집니다.<br>가장 합리적으로 소비하는 방법
@@ -58,37 +42,12 @@
                     <input class="start" type="button" onclick="sample6_execDaumPostcode()" value="start">
                 </div>
             </div>
-        <!--*********************************************메인 내용은 여기까지*********************************************-->
+            <!--*********************************************메인 내용은 여기까지*********************************************-->
         </main>
-
-    </div> <!-- wrapper: header+main-->
-
-        <footer>
-            <div class="footerText">
-                <p>
-                    WeCart
-                    <span>
-                        <a href="">사업자 정보</a>
-                        <a href="">이용약관</a>
-                        <a href="">개인정보처리방침</a>
-                    </span>
-                </p>
-                
-                <p>
-                    Woojungjo
-                    <a href="https://github.com/zuxico123">감성현</a>
-                    <a href="https://github.com/KimYongSae">김용세</a>
-                    <a href="https://github.com/JeongHwan95">김정환</a>
-                    <a href="https://github.com/comdesk">김지연</a>
-                    <a href="https://github.com/Juyeonjoo">조연주</a>
-                    <span class="copyright">&copy; 2023 WeCart, Inc. All Rights Reserved</span>
-                 </p>
-            </div>
-        </footer>
-    </div> <!--wrapper_contatiner-->
+        
+        <jsp:include page="/Woojung_JSP/footer.jsp" flush="true" />
+        
 </body>
-
-
 <!-- 카카오API -->
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -141,5 +100,4 @@
     }
 </script>
 
-</html>
 </html>
